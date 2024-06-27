@@ -91,7 +91,6 @@ button.active {
     border: none;
 }
 
-
 .depth_set input[type="number"] {
     padding: 10px;
     font-size: 1em;
@@ -114,7 +113,6 @@ p {
 .play_button {
     display: flex;
     gap: 10px;
-    /* margin-top: 20px; */
 }
 
 #play,
@@ -122,21 +120,15 @@ p {
     padding: 7px 80px;
 }
 
-
-
 /* Tic Tac Toe Board */
 .board {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
-    margin-left: 750px;
-    margin-top: 100px;
-    width: calc(100vh - 100px);
-    max-width: 60vh;
-    height: calc(100vh - 100px);
-    max-height: 60vh;
+    margin: auto;
+    width: 60vh;
+    height: 60vh;
     padding: 10px;
 }
 
@@ -170,13 +162,12 @@ p {
 #winner {
     display: none;
     position: absolute;
-    top: 20%;
-    left: 63%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffffffcc;
     padding: 10px 20px;
     border: 2px solid #607d8b;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
@@ -188,61 +179,33 @@ p {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        display: block;
-        /* flex-direction: column; */
-        background-color: #f4f4f9;
-        height: auto;
-        width: auto;
-        overflow: auto;
-    }
-
+@media screen and (max-width: 1000px) {
     .sidebar {
         position: static;
         width: 100%;
-        /* Adjusted to fit the screen */
         max-width: 100%;
-        /* Max width to ensure it doesn't exceed the screen width */
         height: auto;
-        /* Adjusted to fit content */
     }
 
     .board {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* margin: auto; */
-        margin-left: 100px;
-        margin-top: 100px;
-        /* width: 60vh; */
-        /* height: 60vh; */
-        padding: 10px;
+        margin: auto;
+        width: 80%;
+        max-width: 80%;
+        height: 60vh;
     }
 
     .depth_set input[type="number"] {
-        padding: 10px;
-        font-size: 1em;
-        margin: 5px 0;
-        border: 1px solid #ddd;
-        width: 400px;
-    }
-
-
-    .cell {
-        font-size: 1.5em;
-        /* Adjust font size for smaller screens */
+        width: 100%;
+        max-width: none;
     }
 
     #winner {
-        display: none;
-        position: absolute;
-        top: 100%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ffffffcc;
-        padding: 10px 20px;
-        border: 2px solid #607d8b;
+    }
+
+    .cell {
+        font-size: 1.5em;
     }
 }
