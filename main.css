@@ -180,6 +180,10 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
+    .body{
+        overflow: auto;
+
+    }
     .sidebar {
         position: static;
         width: 100%;
@@ -191,7 +195,7 @@ p {
         margin: auto;
         width: 80%;
         max-width: 80%;
-        height: 60vh;
+        height: 40vh;
     }
 
     .depth_set input[type="number"] {
