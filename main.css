@@ -198,6 +198,7 @@ p {
         width: 80%;
         max-width: 80%;
         height: 40vh;
+        overflow: auto;
     }
 
     .depth_set input[type="number"] {
@@ -209,7 +210,7 @@ p {
         
     }
     #winner {
-        top: 45%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
