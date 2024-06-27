@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f9;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+}
+
+.top {
+    background-color: #607d8b;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top h1 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.sidebar {
+    position: absolute;
+    top: calc(60px + 20px); 
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    background-color: #e0e0e0; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px; 
+    overflow-y: auto; 
+}
+
+.select_game {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px; 
+}
+
+.section {
+    width: 100%;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px; 
+}
+
+button {
+    background-color: #607d8b;
+    color: white;
+    border: none;
+    padding: 7px 25px; 
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #455a64;
+}
+
+button:focus {
+    outline: none;
+}
+
+button.active {
+    background-color: #455a64;
+    outline: 3px solid #000000; 
+    border: none;
+}
+
+
+.depth_set input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    width: calc(100% - 22px);
+}
+
+.depth_set button {
+    margin-top: 10px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.play_button {
+    display: flex;
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+#play , #clear{
+    padding: 7px 80px;
+}
+
+
+
+/* Tic Tac Toe Board */
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    margin-left: 750px;
+    margin-top: 100px;
+    width: calc(100vh - 100px);
+    max-width: 60vh;
+    height: calc(100vh - 100px);
+    max-height: 60vh;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+.cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #455a64;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #607d8b;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #cfd8dc;
+}
+
+.cell.active {
+    background-color: #b0bec5;
+}
+
+#winner {
+    display: none; 
+    position: absolute;
+    top: 20%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffcc;
+    padding: 10px 20px;
+    border: 2px solid #607d8b;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#winner p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #607d8b;
+    text-align: center;
+}

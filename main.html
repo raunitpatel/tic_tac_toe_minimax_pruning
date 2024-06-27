@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div class="top">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div class="sidebar">
+        <form id="gameForm">
+            <div class="select_game">
+                <div class="section game_type">
+                    <h2>Choose Game Type</h2>
+                    <div class="buttons" id="gameTypeButtons">
+                        <button type="button" id="single" class="game-button" data-value="single">Single Player (vs AI)</button>
+                        <button type="button" id="multi" class="game-button" data-value="multi">Multi Player</button>
+                    </div>
+                </div>
+                <div class="section algo_type">
+                    <h2>Choose Algorithm</h2>
+                    <div class="buttons" id="algorithmButtons">
+                        <button type="button" id="minimax" class="algo-button" data-value="minimax">Minimax</button>
+                        <button type="button" id="alpha_beta" class="algo-button" data-value="alpha_beta">Alpha-Beta Pruning</button>
+                    </div>
+                </div>
+                <div class="section depth_set">
+                    <h2>Set Depth</h2>
+                    <input type="number" name="depth" id="depth_input" placeholder="Enter Depth" min="1" max="Infinity">
+                    <p><b>NOTE:</b> Default max depth of algorithm is set to infinity.</p>
+                </div>
+                <div class="section first_move">
+                    <h2>Choose First Move</h2>
+                    <div class="buttons" id="firstMoveButtons">
+                        <button type="button" id="humanFirst" class="first-move-button" data-value="human">Human</button>
+                        <button type="button" id="aiFirst" class="first-move-button" data-value="ai">AI</button>
+                    </div>
+                </div>
+                <div class="play_button">
+                    <button type="submit" id="play">Play</button>
+                    <button type="button" id="clear">Clear</button>
+                </div>
+            </div>
+        </form>
+        <p><b>HOW TO PLAY:</b>You can either choose multiplayer mode aur single player(vs AI) mode. 
+            If you choose multiplayer mode then you do not to select other options whereas if you choose
+            single player mode you need to select algorithm, depth, and who will play first move.</p>
+
+    </div>
+    <div id="winner"><p id="winner_text"></p></div>
+    <div class="board">
+        <div class="row">
+            <div class="cell" id="0"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
